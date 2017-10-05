@@ -76,7 +76,6 @@ ddef checkout(cart, coupons)
       end
     end
     total += (item_hash[:price] * item_hash[:count])
-    puts total
   end
   if total >= 100
     total = total - (total *0.10)
