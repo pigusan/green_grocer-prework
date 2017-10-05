@@ -70,7 +70,7 @@ def checkout(cart, coupons)
     if item_hash[:count] < 0
       item_hash[:count] = -(item_hash[:count])
     end
-    if !item.include?('W/COUPON') && clearance_applied.key?("#{item} W/COUPON")
+    if !item.include?('W/COUPON') && clearance_applied.key?("#{item} W/COUPON") == true 
       if clearance_applied[item][:count] < clearance_applied["#{item} W/COUPON"][:count]
         clearance_applied["#{item} W/COUPON"][:count] = clearance_applied[item][:count]
       end
